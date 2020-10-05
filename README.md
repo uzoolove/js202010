@@ -52,7 +52,7 @@
 
 ## PPT 다운로드
 * [Download Pages](https://github.com/uzoolove/js202010/blob/main/PPT){:target="_blank"} 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
-
+[건망증이 심한 엔지니어](https://techstock.biz){:target="_blank"}
 
 # 2일차
 ## 소스코드 다운로드
