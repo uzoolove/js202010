@@ -15,7 +15,7 @@
     * Detect Indentation: 체크 해제
 
 ## 소스코드 다운로드
-* [Download Pages](https://github.com/uzoolove/js202010/blob/main/sample/day1.zip) 이동 후 Download 클릭
+* [Download Pages](https://github.com/uzoolove/js202010/blob/main/sample/day1.zip) 이동 후 Download 버튼 클릭
 * 다운로드 받은 day1.zip 파일을 C 드라이브 root에 압축 해제
   * C:\jslab\ch03
   * C:\jslab\css
