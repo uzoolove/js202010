@@ -51,7 +51,7 @@
 7. 각 예제 실행 결과를 개발자 도구의 Console 탭에서 확인
 
 ## PPT 다운로드
-* [Download Pages](https://github.com/uzoolove/js202010/blob/main/PPT){: target="_blank"} 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
+* [Download Pages](https://github.com/uzoolove/js202010/blob/main/PPT){: target="_blank" } 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
 
 
 # 2일차
