@@ -11,8 +11,18 @@
 </head>
 <body>
   <h1>Hello Javascript - 3</h1>
+  <button>누르시오</button>
   <script type="text/Javascript">
     console.log('Hello Javascript - 4');
+    // TODO: DOM 단원에서 자세히 확인
+    var btn = document.querySelector('button');
+    btn.onclick = function(event){
+      // if(event == undefined){
+      //   event = window.event;
+      // }
+      event = event || window.event;
+      console.log('버튼 클릭.', event && event.clientX);
+    };
   </script>
 </body>
 </html>
