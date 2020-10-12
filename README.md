@@ -46,7 +46,7 @@
 ```
 > node webserver.js
 ```
-5. 크롬 브라우저 주소창에 http://localhost 입력
+5. 크롬 브라우저 주소창에 http://localhost:8000 입력
 6. F12 눌러서 크롬 브라우저의 개발자 도구 표시
 7. 각 예제 실행 결과를 개발자 도구의 Console 탭에서 확인
 

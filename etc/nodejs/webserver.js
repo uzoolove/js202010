@@ -7,7 +7,7 @@ var home = path.join(__dirname, '..', '..');
 var file = new nodeStatic.Server(home);
 http.createServer(function (req, res) {	
 	file.serve(req, res);
-}).listen(80, function(){
+}).listen(8000, function(){
 	console.log('http://localhost');
 });
 
