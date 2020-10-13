@@ -1,5 +1,5 @@
 // 10 + 100의 결과를 출력한다.
-// TODO: hoisting 단원. 함수 선언버다 호출을 먼저 할 수 있다.
+// TODO: hoisting 단원. 함수 선언보다 호출을 먼저 할 수 있다.
 add();
 function add(){
   var n1 = 10;
