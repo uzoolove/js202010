@@ -19,5 +19,11 @@ for(var i in arr){
 }
 
 // 배열의 모든 요소 출력(for-of, ECMA6)
+for(var elem of arr){
+  console.log(elem);
+}
 
 // 배열의 모든 요소 출력(forEach(), ECMA5)
+arr.forEach(function(elem, i){
+  console.log(i, elem);
+});
