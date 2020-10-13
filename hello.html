@@ -6,6 +6,19 @@
   <title>Document</title>
   <script type="text/Javascript">
     console.log('Hello Javascript - 1');
+
+    // 브라우저가 html 컨텐츠 파싱과 로딩을 완료한 후에 발생
+    window.onload = function(){
+      // TODO: DOM 단원에서 자세히 확인, querySelector()
+      var btn = document.querySelector('button');
+      btn.onclick = function(event){
+        // if(event == undefined){  // IE8
+        //   event = window.event;
+        // }
+        event = event || window.event;
+        console.log('버튼 클릭.', event && event.clientX);
+      };
+    };    
   </script>
   <script src="hello.js"></script>
 </head>
@@ -14,15 +27,6 @@
   <button>누르시오</button>
   <script type="text/Javascript">
     console.log('Hello Javascript - 4');
-    // TODO: DOM 단원에서 자세히 확인, querySelector()
-    var btn = document.querySelector('button');
-    btn.onclick = function(event){
-      // if(event == undefined){
-      //   event = window.event;
-      // }
-      event = event || window.event;
-      console.log('버튼 클릭.', event && event.clientX);
-    };
   </script>
 </body>
 </html>

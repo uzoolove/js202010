@@ -15,6 +15,12 @@ var arr2 = arr.slice(1, 3);
 var arr2 = arr.slice(1);
 var arr2 = arr.slice(); // 전체 복사
 
+// function slice(sindex, findex){
+//   sindex = sindex || 0;
+//   findex = findex || this.length;
+//   // sindex ~ findex 복사해서 반환
+// }
+
 console.log(arr);
 console.log(arr2);
 console.log(arr == arr2);

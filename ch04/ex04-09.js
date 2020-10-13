@@ -4,6 +4,7 @@ var obj = {};         // object
 var arr = [num, str]; // object(array)
 // 함수를 변수에 할당
 var foo = function(){
+  console.log(this);
   return 'I am foo.';
 };
 // 함수를 배열의 요소로 할당
