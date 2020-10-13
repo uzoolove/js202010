@@ -53,6 +53,11 @@
 ## PPT 다운로드
 * [Download Pages](https://github.com/uzoolove/js202010/blob/main/PPT) 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
 
+## 소스코드 공유(본인의 소스코드를 강사에게 공유하고 싶을때)
+1. [Code Share](https://codeshare.io/) 접속
+2. Share Code Now 클릭
+3. 본인의 코드 복사
+4. 브라우저의 주소창의 URL 복사 후 채팅창에 붙여넣기
 
 # 2일차
 ## 소스코드 다운로드
