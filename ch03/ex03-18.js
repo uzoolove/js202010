@@ -18,36 +18,36 @@ printArr(colorArr);
  *  - length 속성 추가
  *  - 0부터 시작해서 1씩 증가하는 속성 추가
  */
-var colorObj = {
+var arr3 = {
   0: "orange",
   1: "yellow",
   2: "green",
   length: 3,
   push: function(elem){
     // 마지막 인덱스에 지정한 elem를 추가한다.
-    colorObj[colorObj.length] = elem;
-    colorObj.length++;
+    this[this.length] = elem;
+    this.length++;
   },
   pop: function(){
     // 마지막 요소 추출
-    var last = colorObj[colorObj.length-1];
-    colorObj.length--;
-    delete colorObj[colorObj.length];
+    var last = this[this.length-1];
+    this.length--;
+    delete this[this.length];
     return last;
   },
   shift: function(){
     // 첫번째 요소 추출
-    var first = colorObj[0];
-    for(var i=0; i<colorObj.length-1; i++){
-      colorObj[i] = colorObj[i+1];
+    var first = this[0];
+    for(var i=0; i<this.length-1; i++){
+      this[i] = this[i+1];
     }
-    colorObj.length--;
-    delete colorObj[colorObj.length];
+    this.length--;
+    delete this[this.length];
     return first;
   }
 };
-colorObj.push('black');
-colorObj.push('white');
-console.log(colorObj.shift());
-console.log(colorObj.pop());
-printArr(colorObj);
+arr3.push('black');
+arr3.push('white');
+console.log(arr3.shift());
+console.log(arr3.pop());
+printArr(arr3);
