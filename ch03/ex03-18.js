@@ -25,25 +25,28 @@ var arr3 = {
   length: 3,
   push: function(elem){
     // 마지막 인덱스에 지정한 elem를 추가한다.
-    this[this.length] = elem;
-    this.length++;
+    // this[this.length] = elem;
+    // this.length++;
+    // var builtinArray = new Array();
+    // TODO: prototype 단원. 배열메소드는 Array.prototype 속성이 정의되어 있음
+    Array.prototype.push.call(this, elem);
   },
   pop: function(){
     // 마지막 요소 추출
-    var last = this[this.length-1];
-    this.length--;
-    delete this[this.length];
-    return last;
+    // var last = this[this.length-1];
+    // this.length--;
+    // delete this[this.length];
+    return Array.prototype.pop.call(this);
   },
   shift: function(){
     // 첫번째 요소 추출
-    var first = this[0];
-    for(var i=0; i<this.length-1; i++){
-      this[i] = this[i+1];
-    }
-    this.length--;
-    delete this[this.length];
-    return first;
+    // var first = this[0];
+    // for(var i=0; i<this.length-1; i++){
+    //   this[i] = this[i+1];
+    // }
+    // this.length--;
+    // delete this[this.length];
+    return Array.prototype.shift.call(this);
   }
 };
 arr3.push('black');
