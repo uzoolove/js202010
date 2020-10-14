@@ -33,9 +33,9 @@
       var purchases = document.querySelector('#purchases');
       purchases.appendChild(newLi);
     };
-    btn2.onclick = function(){
-      console.log('우유 추가');
-    };
+    // btn2.onclick = function(){
+    //   console.log('우유 추가');
+    // };
 
     btn2.name = '김철수';
     btn2.name = '이영희';
@@ -48,6 +48,8 @@
         var firstLi = list[i].firstElementChild;
         if(firstLi){
           firstLi.parentNode.removeChild(firstLi);
+          // DOM Level 4(IE 지원X)
+          // firstLi.remove();
         }        
       }
     });
