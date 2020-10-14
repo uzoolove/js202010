@@ -21,7 +21,9 @@ var lee = {
 console.log(kim.age, kim.getName());
 console.log(lee.age, lee.getName());
 
-
+console.log(returnName(), returnName.call(kim));  // global 김철수
+console.log(kim.getName(), kim.getName.apply(lee)); // 김철수 이영희
+console.log(lee.getName(), lee.getName.call(window)); // 이영희 global
 
 
 
