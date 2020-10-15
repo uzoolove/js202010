@@ -19,20 +19,37 @@
 	// 1. XMLHttpRequest를 이용한 Ajax 요청(/time)
 	function getTimeXHR(){
 		// 1. XMLHttpRequest 생성		
-		
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function(){
+      // 4. 응답 데이터 처리
+      append(xhr.responseText);
+    };
 		// 2. 요청준비(open())
-		
+    xhr.open('get', '/time?msg=xhr', true);
 		// 3. 요청(send())
-		
-		// 4. 응답 데이터 처리
-		
+		xhr.send();		
 	};
 
 	// 2. XMLHttpRequest를 이용한 Ajax 요청(/timejson)
-	function getTimeJson(){}
+	function getTimeJson(){
+    // 1. XMLHttpRequest 생성		
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function(){
+      // 4. 응답 데이터 처리
+      var result = xhr.responseText;
+      result = JSON.parse(result);
+      appendJson(result);
+    };
+		// 2. 요청준비(open())
+    xhr.open('get', '/timejson?msg=xhr-json', true);
+		// 3. 요청(send())
+		xhr.send();
+  }
 
 	// 3. mylib.js의 ajax(url, method, async, data, dataType, success) 함수를 이용한 Ajax 요청
-	function getTime(){}
+	function getTime(){
+    
+  }
 
 	// 4. mylib.js의 ajax(url, options) 함수를 이용한 Ajax 요청
 	// function getTime(){}
