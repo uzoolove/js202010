@@ -7,7 +7,39 @@
 <script src="../../js/mylib.js"></script>
 <script src="../../js/jquery-1.12.4.js"></script>
 <script>
-	
+	$(function(){
+    $('button').on('click', function(){
+      $.ajax('/time', {
+        data: 'msg=ajax-1',
+        success: append,
+        // method: 'get', // 생략 시 get
+        // async: true,   // 생략 시 true
+        // dataType: 'text',  // 생략 시 알아서 판단
+      });
+      $.ajax('/timejson', {
+        method: 'post',
+        async: false,
+        data: 'msg=ajax-2',
+        // dataType: 'json',
+        success: appendJson
+      });
+      $.ajax('/time?msg=ajax-3');
+      $.ajax('/time?msg=ajax-4', {
+        success: append
+      });
+
+      $.get('/time', 'msg=get-1', append);
+      $.get('/time', 'msg=get-2');
+      $.get('/time?msg=get-3', append);
+      $.get('/time?msg=get-4');
+
+      $.getJSON('/timejson', 'msg=getjson', appendJson);
+
+      $.post('/time', 'msg=post', append);
+
+      $('#result').load('/time?msg=load');
+    });
+  });
 	
 	function append(str){
 		document.querySelector('#result').innerHTML += str + '<br>';

@@ -62,22 +62,22 @@
    *  3. 인자값의 의미를 파악하기 좋음(가독성)
    */
 	function getTime(){
-    ajax('/time', {
+    MyLib.ajax('/time', {
       data: 'msg=ajax-1',
       success: append,
       // method: 'get',
       // async: true,
       // dataType: 'text',      
     });
-    ajax('/timejson', {
+    MyLib.ajax('/timejson', {
       method: 'post',
       async: false,
       data: 'msg=ajax-2',
       dataType: 'json',
       success: appendJson
     });
-    ajax('/time?msg=ajax-3');
-    ajax('/time?msg=ajax-4', {
+    MyLib.ajax('/time?msg=ajax-3');
+    MyLib.ajax('/time?msg=ajax-4', {
       success: append
     });
   }
