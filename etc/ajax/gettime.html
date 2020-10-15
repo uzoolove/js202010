@@ -10,8 +10,8 @@
 <script>
 	window.onload = function(){
 		document.querySelector('button').onclick = function(){
-      getTimeXHR();
-      getTimeJson();
+      // getTimeXHR();
+      // getTimeJson();
       getTime();
     };
 	};
@@ -48,11 +48,18 @@
 
 	// 3. mylib.js의 ajax(url, method, async, data, dataType, success) 함수를 이용한 Ajax 요청
 	function getTime(){
-    
+    ajax('/time', 'get', true, 'msg=ajax-1', 'text', append);
+    ajax('/timejson', 'post', false, 'msg=ajax-2', 'json', appendJson);
+    ajax('/time?msg=ajax-3');
+    ajax('/time?msg=ajax-4', null, undefined, 0, false, append);
   }
 
 	// 4. mylib.js의 ajax(url, options) 함수를 이용한 Ajax 요청
-	// function getTime(){}
+	function getTime(){
+    ajax('/time', {
+      
+    });
+  }
 
 	// 5. mylib.js의 get(url, data, success) 함수를 이용한 Ajax 요청
 	// function getTime(){}
