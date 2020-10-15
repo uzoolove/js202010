@@ -1,4 +1,25 @@
 var MyLib = {};
+
+/**
+ * 오버로딩
+ *  - 동일한 이름의 메소드를 중복 정의하는 객체지향 언어의 기능
+ *  - 매개변수의 개수, 타입, 순서를 다른게 정의해야 한다.
+ * 자바스크립트의 오버로딩
+ *  - 동일한 이름의 함수를 중복으로 정의하면 마지막에 정의한 함수만 남음
+ *  - 함수는 하나만 정의하고 함수내에서 매개변수의 개수, 타입, 순서를 체크해서 분기처리 
+ */
+// get 방식의 Ajax 요청을 보낸다.
+MyLib.get = function(url, data, success){
+  var options = {};
+  if(typeof data == 'string'){
+    options.data = data;
+    options.success = success;
+  }else{
+    options.success = data;
+  }
+  MyLib.ajax(url, options);
+};
+
 // Ajax 요청을 보낸다.
 // var ajax = function(url, method, async, data, dataType, success){
 MyLib.ajax = function(url, options){
