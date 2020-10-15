@@ -14,7 +14,7 @@ var isPrime = function(num){
       }
     }
   }  
-  // 소수 판별 코드
+  // 캐시를 위한 코드
   isPrime.cache[num] = prime;
   return prime;
 };
