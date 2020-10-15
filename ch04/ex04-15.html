@@ -8,7 +8,19 @@
 	
 </style>
 <script>
-	
+	window.onload = function(){
+    console.log('1. load 이벤트 발생.');
+    var btn = document.querySelector('#click');
+    btn.onclick = function(){
+      console.log('3. click 이벤트 발생.');
+      var msg = '5. 버튼 클릭 후 3초 지남.';
+      setTimeout(function(){
+        console.log(msg);
+      }, 3000);
+      console.log('4. click 이벤트 처리완료.');
+    };
+    console.log('2. load 이벤트 처리완료.');
+  };
 </script>
 </head>
 <body>
