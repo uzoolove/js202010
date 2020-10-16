@@ -1,17 +1,3 @@
-// 메모이제이션(캐싱) 기능의 함수를 정의할때 사용
-// isPrime(5); 캐싱 X
-// isPrime.memoization(5);  캐싱 O
-Function.prototype.memoization = function(key){
-  // 캐시를 위한 코드
-  this.cache = this.cache || {};
-  if(this.cache[key] != undefined){
-    return this.cache[key];
-  }else{
-    // 캐시를 위한 코드
-    return this.cache[key] = this(key);
-  }
-};
-
 // primetest.js 복사
 // 지정한 수가 소수인지 여부를 반환
 var isPrime = function(num){
