@@ -27,3 +27,10 @@ for(var elem of arr){
 arr.forEach(function(elem, i){
   console.log(i, elem);
 });
+
+// Arrow Function(ECMA6)
+arr.forEach((elem, i) => {
+  console.log(i, elem);
+});
+var sum = arr.map(elem=>elem*elem);
+console.log(sum);

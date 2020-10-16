@@ -6,7 +6,7 @@ MyLib.inherite = function(Parent, Child){
   // F.prototype = Parent.prototype;
   // Child.prototype = new F();
   // 전달한 prototype 객체를 공유하는 객체를 생성해서 반환
-  Child.prototype = Object.create(HighSchool.prototype);
+  Child.prototype = Object.create(Parent.prototype);
   Child.prototype.constructor = Child;
 };
 
