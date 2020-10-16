@@ -1,5 +1,12 @@
 var MyLib = {};
 
+Function.prototype.memoize = function(){
+  var fn = this;
+  return function(){
+    return fn.memoization.apply(fn, arguments);
+  };
+};
+
 // 메모이제이션(캐싱) 기능의 함수를 정의할때 사용
 // isPrime(5); 캐싱 X
 // isPrime.memoization(5);  캐싱 O

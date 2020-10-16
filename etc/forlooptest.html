@@ -17,9 +17,11 @@
     var btns = document.querySelectorAll('button');
     // IIFE pattern
 		for(var i=0; i<btns.length; i++){
-			btns[i].addEventListener('click', function(){
-				console.log('btn-' + i + ' 클릭');
-			});
+      (function(i){
+        btns[i].addEventListener('click', function(){
+          console.log('btn-' + i + ' 클릭');
+        });
+      })(i);			
 		}
 	};
 </script>
