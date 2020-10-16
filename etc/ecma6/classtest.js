@@ -15,7 +15,7 @@ class HighSchool{
 // 대학교 성적관리 클래스(총점, 평균과 학점 계산)
 class College extends HighSchool{
   constructor(kor, eng){
-    super(this, kor, eng);
+    super(kor, eng);
   }
   grade(){
     var grade = 'F';
