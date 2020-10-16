@@ -28,7 +28,7 @@ var arr3 = {
     // this[this.length] = elem;
     // this.length++;
     // var builtinArray = new Array();
-    // TODO: prototype 단원. 배열메소드는 Array.prototype 속성이 정의되어 있음
+    // TODO: prototype 단원. 배열메소드는 Array.prototype 속성에 정의되어 있음
     Array.prototype.push.call(this, elem);
   },
   pop: function(){
