@@ -1,5 +1,15 @@
 var MyLib = {};
 
+// Child가 Parent를 상속받는다.
+MyLib.inherite = function(Parent, Child){
+  // var F = function(){};
+  // F.prototype = Parent.prototype;
+  // Child.prototype = new F();
+  // 전달한 prototype 객체를 공유하는 객체를 생성해서 반환
+  Child.prototype = Object.create(HighSchool.prototype);
+  Child.prototype.constructor = Child;
+};
+
 /**
  * 오버로딩
  *  - 동일한 이름의 메소드를 중복 정의하는 객체지향 언어의 기능

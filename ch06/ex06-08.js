@@ -17,15 +17,7 @@ function College(kor, eng){
   HighSchool.call(this, kor, eng);
 }
 // College가 HighSchool을 상속받는다.
-var inherite = function(Parent, Child){
-  var F = function(){};
-  F.prototype = Parent.prototype;
-  Child.prototype = new F();
-  Child.prototype.constructor = Child;
-};
-
-inherite(HighSchool, College);
-
+MyLib.inherite(HighSchool, College);
 
 College.prototype.grade = function(){
 	var grade = 'F';
